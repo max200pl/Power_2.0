@@ -1,0 +1,53 @@
+// main: ../../style.less
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__img {
+    margin-left: 15px;
+
+    @include screen-lg-xl {
+        width: 50px;
+    }
+
+
+    @include screen-xs-lg {
+        width: 40px;
+    }
+
+
+    @include screen-xs-md {
+        margin-left: 0px;
+    }
+}
+
+.logo__name {
+    text-transform: uppercase;
+    font-size: 3.3rem;
+    color: $black;
+    font-weight: 700;
+    margin-left: 1.5rem;
+
+    @include screen-xl-xxl {
+        font-size: 2.3rem;
+    }
+
+
+    @include screen-md-xl {
+        font-size: 2.3rem;
+    }
+
+
+    @include screen-sm-md {
+        margin-left: 1.2rem;
+        font-size: 2rem;
+    }
+
+
+    @include screen-xs-sm {
+        margin-left: 1rem;
+        font-size: 1.5rem;
+    }
+}

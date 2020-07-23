@@ -1,0 +1,123 @@
+.nav__modal {
+    @include screen-xs-lg {
+        display: none;
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        background-color: rgba(6, 15, 49, 0.11);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include screen-xs-lg {
+        flex-direction: column;
+        position: relative;
+        text-align: center;
+        padding: 20px;
+        margin: 45px auto;
+        left: 0;
+        top: 50px;
+        right: 0;
+        width: 65%;
+        background: #767676;
+        box-shadow: 3px 3px 42px $black;
+        border: 1px solid rgba(0, 0, 0, 0.102);
+    }
+
+
+    @include screen-xs-sm {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+.nav__link {
+    font-size: 18px;
+    font-weight: 300;
+    position: relative;
+    margin-left: 3.5rem;
+    text-decoration: none;
+    color: $black;
+    cursor: pointer;
+
+    &:after {
+        position: absolute;
+        z-index: 1;
+        bottom: -5px;
+        left: 0px;
+        width: 0;
+        height: 3px;
+        content: "";
+        transition: width 0.2s linear;
+        background-color: $red;
+
+        @include screen-xs-lg {
+            bottom: 3.6px;
+            height: 2px;
+        }
+    }
+
+    &:hover:not(.nav__link--btn) {
+        &:after {
+            width: 100%;
+        }
+    }
+
+    &--btn {
+        font-size: 20px;
+        padding: 1rem 3rem;
+        background-color: $red;
+        transition: background-color 0.2s linear, 0.2s color linear;
+        border: 2px solid $red;
+        border-radius: 5px;
+        color: $white;
+
+        &:hover {
+            color: $red;
+            background-color: $white;
+        }
+
+        @include screen-xl-xxl {
+            padding: .8rem 2rem;
+        }
+
+
+        @include screen-md-xl {
+            padding: .5rem 1.5rem;
+        }
+
+
+        @include screen-xs-md {
+            padding: .3rem 1rem;
+        }
+    }
+
+    @include screen-lg-xl {
+        margin-left: 1.5rem;
+    }
+
+
+    @include screen-xl-xxl {
+        margin-left: 2rem;
+    }
+
+
+    @include screen-xs-lg {
+        &:not(.nav__link--btn) {
+            padding-bottom: 10px;
+        }
+
+        margin-left: 0;
+    }
+}

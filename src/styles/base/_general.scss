@@ -1,0 +1,24 @@
+h1, h2, h3, h4, h5, h6, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    background-color: #fffffd;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+}
